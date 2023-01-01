@@ -276,3 +276,8 @@
     transform: rotate(0deg);
   }
 }
+
+.swiper-button-next, .swiper-button-prev {
+  background-color: black;
+  
+}

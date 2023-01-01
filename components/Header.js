@@ -5,8 +5,8 @@ import {
   MenuIcon,
   SearchIcon,
   UserCircleIcon,
+  AdjustmentsIcon,
 } from "@heroicons/react/solid";
-import tinyHomes from "../public/icons/tinyhomes.jpeg";
 import Filter from "./Filter";
 
 function Header() {
@@ -33,32 +33,17 @@ function Header() {
         <div className="flex items-center space-x-4 justify-end text-gray-500">
           <p className="cursor-pointer hidden md:inline">Airbnb your home</p>
           <GlobeAltIcon className="h-6 cursor-pointer" />
-          <div className="flex items-center space-x-2 border-2 p-2 rounded-full">
+          <div className="flex items-center space-x-2 border p-2 rounded-full">
             <MenuIcon className="h-6" />
             <UserCircleIcon className="h-6" />
           </div>
         </div>
       </header>
-      <nav className="relative">
-        <div className="flex whitespace-nowrap space-x-10 sm:space-x-20 overflow-x-scroll scrollbar-hide p-10">
-          <Filter title="Lake" Icon="/icons/lake.jpeg" />
-          <Filter title="Amazing pools" Icon="/icons/pools.jpeg" />
-          <Filter title="Islands" Icon="/icons/islands.jpeg" />
-          <Filter title="Golfing" Icon="/icons/golf.jpeg" />
-          <Filter title="OMG!" Icon="/icons/omg.jpeg" />
-          <Filter title="Play" Icon="/icons/play.jpeg" />
-          <Filter title="Chef's kitchens" Icon="/icons/kitchen.jpeg" />
-          <Filter title="Private rooms" Icon="/icons/rooms.jpeg" />
-          <Filter title="Mansions" Icon="/icons/mansions.jpeg" />
-          <Filter title="Luxe" Icon="/icons/luxe.jpeg" />
-          <Filter title="Iconic cities" Icon="/icons/cities.jpeg" />
-          <Filter title="Beachfront" Icon="/icons/beach.jpeg" />
-          <Filter title="Skiing" Icon="/icons/skiing.jpeg" />
-          <Filter title="Amazing views" Icon="/icons/views.jpeg" />
-          <Filter title="Farms" Icon="/icons/farms.jpeg" />
-          <Filter title="Surfing" Icon="/icons/surfing.jpeg" />
-          <Filter title="Tiny homes" Icon="/icons/tinyhomes.jpeg" />
-          <Filter title="Trending" Icon="/icons/trending.jpeg" />
+      <nav className="relative flex gap-2 p-10">
+        <Filter />
+        <div className="flex items-center space-x-2 border p-2 rounded-xl text-gray-500">
+          <AdjustmentsIcon className="h-6" />
+          <p>Filters</p>
         </div>
       </nav>
     </div>

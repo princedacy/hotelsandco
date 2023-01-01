@@ -1,0 +1,9 @@
+.swiper {
+    border-radius: 50%;
+    cursor: pointer;
+    border: 0.5px solid rgb(0 0 0 / 0.3);
+    margin: 0;
+    padding: 2px;
+    width: 30px;
+    height: 30px;
+}
