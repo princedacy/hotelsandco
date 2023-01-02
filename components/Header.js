@@ -11,8 +11,8 @@ import Filter from "./Filter";
 
 function Header() {
   return (
-    <div className="top-0 z-40 bg-white shadow-sm sticky">
-      <header className="pr-10 pl-10 pt-5 pb-5 grid grid-cols-3 shadow-sm">
+    <div className="top-0 z-50 bg-white shadow-sm sticky">
+      <header className="pr-20 pl-20 pt-5 pb-5 grid grid-cols-3 shadow-sm">
         <div className="relative flex items-center h-10 cursor-pointer my-auto">
           <Image
             src="/Airbnb_logo.png"
@@ -39,7 +39,7 @@ function Header() {
           </div>
         </div>
       </header>
-      <nav className="relative flex gap-2 p-10">
+      <nav className="relative flex gap-2 pt-10 pb-10 pr-20 pl-20">
         <Filter />
         <div className="flex items-center space-x-2 border p-2 rounded-xl text-gray-500">
           <AdjustmentsIcon className="h-6" />

@@ -1,0 +1,402 @@
+[
+    {
+      "number": 64291,
+      "status": false,
+      "wifi": true,
+      "location": "Avondale",
+      "image": "https://loremflickr.com/640/480/city",
+      "id": "1"
+    },
+    {
+      "number": 9036,
+      "status": false,
+      "wifi": true,
+      "location": "Lewisville",
+      "image": "https://loremflickr.com/640/480/city",
+      "id": "2"
+    },
+    {
+      "number": 93344,
+      "status": true,
+      "wifi": false,
+      "location": "Carson",
+      "image": "https://loremflickr.com/640/480/city",
+      "id": "3"
+    },
+    {
+      "number": 74375,
+      "status": true,
+      "wifi": true,
+      "location": "Jacksonville",
+      "image": "https://loremflickr.com/640/480/city",
+      "id": "4"
+    },
+    {
+      "number": 82818,
+      "status": true,
+      "wifi": false,
+      "location": "Freeport",
+      "image": "https://loremflickr.com/640/480/city",
+      "id": "5"
+    },
+    {
+      "number": 76220,
+      "status": true,
+      "wifi": true,
+      "location": "Pasadena",
+      "image": "https://loremflickr.com/640/480/city",
+      "id": "6"
+    },
+    {
+      "number": 63812,
+      "status": true,
+      "wifi": true,
+      "location": "Mentor",
+      "image": "https://loremflickr.com/640/480/city",
+      "id": "7"
+    },
+    {
+      "number": 42580,
+      "status": true,
+      "wifi": true,
+      "location": "Quincy",
+      "image": "https://loremflickr.com/640/480/city",
+      "id": "8"
+    },
+    {
+      "number": 57927,
+      "status": true,
+      "wifi": false,
+      "location": "Vineland",
+      "image": "https://loremflickr.com/640/480/city",
+      "id": "9"
+    },
+    {
+      "number": 48089,
+      "status": true,
+      "wifi": true,
+      "location": "North Lauderdale",
+      "image": "https://loremflickr.com/640/480/city",
+      "id": "10"
+    },
+    {
+      "number": 41556,
+      "status": false,
+      "wifi": true,
+      "location": "Turlock",
+      "image": "https://loremflickr.com/640/480/city",
+      "id": "11"
+    },
+    {
+      "number": 10189,
+      "status": true,
+      "wifi": true,
+      "location": "Lewisville",
+      "image": "https://loremflickr.com/640/480/city",
+      "id": "12"
+    },
+    {
+      "number": 37173,
+      "status": false,
+      "wifi": true,
+      "location": "Goodyear",
+      "image": "https://loremflickr.com/640/480/city",
+      "id": "13"
+    },
+    {
+      "number": 64913,
+      "status": false,
+      "wifi": true,
+      "location": "Alpharetta",
+      "image": "https://loremflickr.com/640/480/city",
+      "id": "14"
+    },
+    {
+      "number": 13183,
+      "status": false,
+      "wifi": true,
+      "location": "Cambridge",
+      "image": "https://loremflickr.com/640/480/city",
+      "id": "15"
+    },
+    {
+      "number": 4834,
+      "status": true,
+      "wifi": false,
+      "location": "Novato",
+      "image": "https://loremflickr.com/640/480/city",
+      "id": "16"
+    },
+    {
+      "number": 23203,
+      "status": true,
+      "wifi": true,
+      "location": "Corona",
+      "image": "https://loremflickr.com/640/480/city",
+      "id": "17"
+    },
+    {
+      "number": 5078,
+      "status": false,
+      "wifi": false,
+      "location": "Watsonville",
+      "image": "https://loremflickr.com/640/480/city",
+      "id": "18"
+    },
+    {
+      "number": 52749,
+      "status": false,
+      "wifi": false,
+      "location": "Mountain View",
+      "image": "https://loremflickr.com/640/480/city",
+      "id": "19"
+    },
+    {
+      "number": 95774,
+      "status": true,
+      "wifi": false,
+      "location": "Quincy",
+      "image": "https://loremflickr.com/640/480/city",
+      "id": "20"
+    },
+    {
+      "number": 45579,
+      "status": false,
+      "wifi": true,
+      "location": "Burlington",
+      "image": "https://loremflickr.com/640/480/city",
+      "id": "21"
+    },
+    {
+      "number": 80213,
+      "status": true,
+      "wifi": true,
+      "location": "Irondequoit",
+      "image": "https://loremflickr.com/640/480/city",
+      "id": "22"
+    },
+    {
+      "number": 68686,
+      "status": true,
+      "wifi": false,
+      "location": "Pembroke Pines",
+      "image": "https://loremflickr.com/640/480/city",
+      "id": "23"
+    },
+    {
+      "number": 6515,
+      "status": true,
+      "wifi": false,
+      "location": "East Lansing",
+      "image": "https://loremflickr.com/640/480/city",
+      "id": "24"
+    },
+    {
+      "number": 82728,
+      "status": false,
+      "wifi": true,
+      "location": "DeKalb",
+      "image": "https://loremflickr.com/640/480/city",
+      "id": "25"
+    },
+    {
+      "number": 19217,
+      "status": true,
+      "wifi": true,
+      "location": "Bossier City",
+      "image": "https://loremflickr.com/640/480/city",
+      "id": "26"
+    },
+    {
+      "number": 13444,
+      "status": true,
+      "wifi": true,
+      "location": "Toms River",
+      "image": "https://loremflickr.com/640/480/city",
+      "id": "27"
+    },
+    {
+      "number": 61002,
+      "status": true,
+      "wifi": false,
+      "location": "Hacienda Heights",
+      "image": "https://loremflickr.com/640/480/city",
+      "id": "28"
+    },
+    {
+      "number": 14275,
+      "status": false,
+      "wifi": true,
+      "location": "Lewisville",
+      "image": "https://loremflickr.com/640/480/city",
+      "id": "29"
+    },
+    {
+      "number": 25751,
+      "status": false,
+      "wifi": false,
+      "location": "Schenectady",
+      "image": "https://loremflickr.com/640/480/city",
+      "id": "30"
+    },
+    {
+      "number": 72329,
+      "status": false,
+      "wifi": true,
+      "location": "Town 'n' Country",
+      "image": "https://loremflickr.com/640/480/city",
+      "id": "31"
+    },
+    {
+      "number": 13708,
+      "status": true,
+      "wifi": false,
+      "location": "Petaluma",
+      "image": "https://loremflickr.com/640/480/city",
+      "id": "32"
+    },
+    {
+      "number": 72545,
+      "status": false,
+      "wifi": false,
+      "location": "Kalamazoo",
+      "image": "https://loremflickr.com/640/480/city",
+      "id": "33"
+    },
+    {
+      "number": 16929,
+      "status": false,
+      "wifi": false,
+      "location": "Richmond",
+      "image": "https://loremflickr.com/640/480/city",
+      "id": "34"
+    },
+    {
+      "number": 48121,
+      "status": false,
+      "wifi": false,
+      "location": "University",
+      "image": "https://loremflickr.com/640/480/city",
+      "id": "35"
+    },
+    {
+      "number": 39093,
+      "status": true,
+      "wifi": true,
+      "location": "Miami Gardens",
+      "image": "https://loremflickr.com/640/480/city",
+      "id": "36"
+    },
+    {
+      "number": 54802,
+      "status": true,
+      "wifi": true,
+      "location": "Sayreville",
+      "image": "https://loremflickr.com/640/480/city",
+      "id": "37"
+    },
+    {
+      "number": 54363,
+      "status": true,
+      "wifi": false,
+      "location": "Tigard",
+      "image": "https://loremflickr.com/640/480/city",
+      "id": "38"
+    },
+    {
+      "number": 32147,
+      "status": false,
+      "wifi": false,
+      "location": "Norfolk",
+      "image": "https://loremflickr.com/640/480/city",
+      "id": "39"
+    },
+    {
+      "number": 88862,
+      "status": true,
+      "wifi": false,
+      "location": "Coon Rapids",
+      "image": "https://loremflickr.com/640/480/city",
+      "id": "40"
+    },
+    {
+      "number": 77114,
+      "status": true,
+      "wifi": false,
+      "location": "Sanford",
+      "image": "https://loremflickr.com/640/480/city",
+      "id": "41"
+    },
+    {
+      "number": 82535,
+      "status": true,
+      "wifi": false,
+      "location": "Boynton Beach",
+      "image": "https://loremflickr.com/640/480/city",
+      "id": "42"
+    },
+    {
+      "number": 52114,
+      "status": true,
+      "wifi": true,
+      "location": "Coral Springs",
+      "image": "https://loremflickr.com/640/480/city",
+      "id": "43"
+    },
+    {
+      "number": 14439,
+      "status": false,
+      "wifi": false,
+      "location": "Farmington",
+      "image": "https://loremflickr.com/640/480/city",
+      "id": "44"
+    },
+    {
+      "number": 89826,
+      "status": true,
+      "wifi": false,
+      "location": "Lynchburg",
+      "image": "https://loremflickr.com/640/480/city",
+      "id": "45"
+    },
+    {
+      "number": 48664,
+      "status": true,
+      "wifi": false,
+      "location": "Fort Lauderdale",
+      "image": "https://loremflickr.com/640/480/city",
+      "id": "46"
+    },
+    {
+      "number": 74714,
+      "status": false,
+      "wifi": true,
+      "location": "Loveland",
+      "image": "https://loremflickr.com/640/480/city",
+      "id": "47"
+    },
+    {
+      "number": 43099,
+      "status": false,
+      "wifi": false,
+      "location": "Bayonne",
+      "image": "https://loremflickr.com/640/480/city",
+      "id": "48"
+    },
+    {
+      "number": 77211,
+      "status": true,
+      "wifi": true,
+      "location": "Hendersonville",
+      "image": "https://loremflickr.com/640/480/city",
+      "id": "49"
+    },
+    {
+      "number": 39463,
+      "status": false,
+      "wifi": false,
+      "location": "Bountiful",
+      "image": "https://loremflickr.com/640/480/city",
+      "id": "50"
+    }
+  ]
