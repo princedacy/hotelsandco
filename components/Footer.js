@@ -4,32 +4,32 @@ import { ChevronUpIcon, GlobeAltIcon } from "@heroicons/react/solid";
 
 function Footer() {
   return (
-    <div className="flex items-center justify-between sticky bottom-0 bg-white shadow-sm border text-sm font-light pr-20 pl-20 pt-4 pb-4 z-50">
+    <div className="flex items-center justify-between fixed bottom-0 bg-white shadow-sm border text-sm font-light px-20 py-4 z-50 w-full">
       <div className="flex">
         <span>© 2023 Airbnb, Inc.</span>
         <ul className="flex">
-          <li className="before:content-['·'] pr-2 pl-2">
+          <li className="before:content-['·'] px-2">
             <a href="#" className="pl-2 no-underline hover:underline">
               Terms
             </a>
           </li>
-          <li className="before:content-['·'] pr-2 pl-2">
+          <li className="before:content-['·'] px-2">
             <a href="#" className="pl-2 no-underline hover:underline">
               Sitemap
             </a>
           </li>
-          <li className="before:content-['·'] pr-2 pl-2">
+          <li className="before:content-['·'] px-2">
             <a href="#" className="pl-2 no-underline hover:underline">
               Privacy
             </a>
           </li>
-          <li className="before:content-['·'] pr-2 pl-2">
+          <li className="before:content-['·'] px-2">
             <a href="#" className="pl-2 no-underline hover:underline">
               Your privacy choices
               {/* <Image src={"/icons/privacy.svg"} fill alt="privacy choices" /> */}
             </a>
           </li>
-          <li className="before:content-['·'] pr-2 pl-2">
+          <li className="before:content-['·'] px-2">
             <a href="#" className="pl-2 no-underline hover:underline">
               Destinations
             </a>

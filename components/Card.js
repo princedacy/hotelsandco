@@ -2,7 +2,9 @@ import React from "react";
 import Image from "next/image";
 import { StarIcon } from "@heroicons/react/solid";
 import { useQuery } from "@tanstack/react-query";
+import { useRouter } from "next/router";
 function Card() {
+  const router = useRouter();
   const { data, isLoading, error } = useQuery({
     queryKey: ["rooms"],
     queryFn: () =>
@@ -14,11 +16,30 @@ function Card() {
 
   if (error) return "An error has occurred: " + error.message;
 
+  const openRoom = (room) => {
+    router.push({
+      pathname: "/room",
+      query: {
+        id: room.id,
+        location: room.location,
+        image: room.image,
+        price: room.price,
+        rating: room.rating,
+        description: room.description
+      },
+    });
+  };
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-1 pr-20 pl-20">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-1 px-20">
       {data.map((room) => (
-        <div className="card-container container mx-auto relative w-80 h-80 mb-16 cursor-pointer" key={room.id}>
-          <div className="card group text-left p-3 mb-5 relative w-full">
+        <div
+          className="card-container container mx-auto relative w-80 h-80 mb-16 cursor-pointer"
+          key={room.id}
+        >
+          <div
+            className="card group text-left p-3 mb-5 relative w-full"
+            onClick={() => openRoom(room)}
+          >
             <Image
               className="!w-5 !h-5 absolute !top-5 !right-5 cursor-pointer z-40 !left-auto"
               src={"/icons/heart.svg"}
@@ -37,8 +58,15 @@ function Card() {
               <h3 className="location-name text-black font-medium py-2">
                 {room.location}
               </h3>
-              <div className="flex">
-                <StarIcon className="h-6" /> <p className="font-light">4.86</p>
+              <div className="flex items-center">
+                {(room.rating * 0.5) >= 3 ? (
+                  <>
+                    <StarIcon className="h-4" />
+                    <p className="font-light text-sm">{room.rating * 0.5}</p>
+                  </>
+                ) : (
+                  ""
+                )}
               </div>
             </div>
             <h3 className="text-gray-500 font-light">On the lake</h3>
