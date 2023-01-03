@@ -4,7 +4,7 @@ import Topnav from "../components/Topnav";
 import { useRouter } from "next/router";
 import Image from "next/image";
 import { StarIcon } from "@heroicons/react/solid";
-import { ShareIcon, HeartIcon, HomeIcon } from "@heroicons/react/outline";
+import { ShareIcon, HeartIcon, HomeIcon, ArrowCircleDownIcon, PuzzleIcon } from "@heroicons/react/outline";
 
 function Room() {
   const router = useRouter();
@@ -102,7 +102,7 @@ function Room() {
             </div>
           </div>
           <div className="flex py-4">
-            <HomeIcon className="h-7" />
+            <ArrowCircleDownIcon className="h-7" />
             <div className="relative pl-2">
               <p className="text-md font-normal">Self check-in</p>
               <p className="text-sm font-light text-gray-500">
@@ -111,9 +111,9 @@ function Room() {
             </div>
           </div>
           <div className="flex pt-4 pb-10">
-            <HomeIcon className="h-7" />
+            <PuzzleIcon className="h-7" />
             <div className="relative pl-2">
-              <p className="text-md font-normal">Dedicated workspace</p>
+              <p className="text-md font-normal">Furry friends welcome</p>
               <p className="text-sm font-light text-gray-500">
                 Bring your pets along for the stay.
               </p>
