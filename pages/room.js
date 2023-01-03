@@ -4,16 +4,31 @@ import Topnav from "../components/Topnav";
 import { useRouter } from "next/router";
 import Image from "next/image";
 import { StarIcon } from "@heroicons/react/solid";
-import { ShareIcon, HeartIcon} from "@heroicons/react/outline";
+import { ShareIcon, HeartIcon, HomeIcon } from "@heroicons/react/outline";
 
 function Room() {
   const router = useRouter();
-  const { id, location, image, price, rating, description } = router.query;
+  const {
+    id,
+    location,
+    image,
+    price,
+    rating,
+    description,
+    reviews,
+    guests,
+    bedrooms,
+    beds,
+    baths,
+    host_image,
+    host_name,
+    city
+  } = router.query;
   return (
     <div>
       <Topnav />
       <div className="grid px-20">
-        <h3 className="text-2xl font-normal py-2">{location}</h3>
+        <h3 className="text-2xl font-semibold py-2">{location}</h3>
         <div className="flex justify-between">
           <div className="flex justify-start items-center font-medium text-sm">
             <div className="flex items-center  py-2">
@@ -22,12 +37,12 @@ function Room() {
             </div>
             <p className="pl-2 before:content-['·']">
               <a href="#" className="pl-2 underline">
-                8 reviews
+                {reviews} reviews
               </a>
             </p>
             <p className="flex items-center pl-2 before:content-['·']">
               <a href="#" className="pl-2 underline">
-                Sanderfjold, vestford
+                {city}
               </a>
             </p>
           </div>
@@ -48,21 +63,85 @@ function Room() {
         </div>
         <div
           style={{ backgroundImage: `url(${image})` }}
-          className="bg-center bg-cover h-72 rounded-3xl cursor-pointer hover:shadow-sm"
+          className="bg-center bg-cover h-72 rounded-3xl cursor-pointer hover:shadow-md"
         ></div>
-        <p>{description}</p>
+        <p className="pt-10 w-1/2">{description}</p>
       </div>
       <div className="px-20 py-10">
-        <div className="border-b w-1/3">
-          <h3>Hosted by paal</h3>
-          <ul className="flex">
-            <li>10 guests</li>
-            <li className="pl-2 before:content-['·']">6 bedrooms</li>
-            <li className="pl-2 before:content-['·']">8 bed</li>
-            <li className="pl-2 before:content-['·']">5 baths</li>
-          </ul>
+        <div className="border-b w-1/2 py-5 flex justify-between items-center">
+          <div>
+            <h3 className="text-lg font-medium">Hosted by {host_name}</h3>
+            <ul className="flex">
+              <li className="font-light">{guests} guests</li>
+              <li className="pl-2 before:content-['·'] before:pr-2 font-light">
+                {bedrooms} bedrooms
+              </li>
+              <li className="pl-2 before:content-['·'] before:pr-2  font-light">
+                {beds} bed
+              </li>
+              <li className="pl-2 before:content-['·'] before:pr-2  font-light">
+                {baths} baths
+              </li>
+            </ul>
+          </div>
+          <Image
+            src={host_image}
+            alt={host_name}
+            fill
+            className="!w-10 !h-10 rounded-full !relative"
+          />
         </div>
-        
+        <div className="py-5">
+          <div className="flex py-4">
+            <HomeIcon className="h-7" />
+            <div className="relative pl-2">
+              <p className="text-md font-normal">Dedicated workspace</p>
+              <p className="text-sm font-light text-gray-500">
+                A private room with wifi that’s well-suited for working.
+              </p>
+            </div>
+          </div>
+          <div className="flex py-4">
+            <HomeIcon className="h-7" />
+            <div className="relative pl-2">
+              <p className="text-md font-normal">Self check-in</p>
+              <p className="text-sm font-light text-gray-500">
+                Check yourself in with the lockbox.
+              </p>
+            </div>
+          </div>
+          <div className="flex pt-4 pb-10">
+            <HomeIcon className="h-7" />
+            <div className="relative pl-2">
+              <p className="text-md font-normal">Dedicated workspace</p>
+              <p className="text-sm font-light text-gray-500">
+                Bring your pets along for the stay.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="absolute top-3/4 right-20 border w-1/4 h-40 rounded-2xl shadow-lg p-5">
+        <div className="flex items-center justify-between font-medium text-sm">
+          <div className="flex">
+            <span className="font-regular">${price}&nbsp;</span>
+            <span className="font-light">night</span>
+          </div>
+          <div className="flex items-center">
+            <div className="flex items-center  py-2">
+              <StarIcon className="h-4" />
+              <p>{rating * 0.5}</p>
+            </div>
+            <p className="pl-2 before:content-['·']">
+              <a href="#" className="pl-2 underline">
+                {reviews} reviews
+              </a>
+            </p>
+          </div>
+        </div>
+        <button className="bg-[#ff385c] text-white w-full h-12 rounded-md">
+          Reserve
+        </button>
       </div>
       <Footer />
     </div>

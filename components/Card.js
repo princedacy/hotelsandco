@@ -25,7 +25,15 @@ function Card() {
         image: room.image,
         price: room.price,
         rating: room.rating,
-        description: room.description
+        description: room.description,
+        reviews: room.reviews,
+        guests: room.guests,
+        bedrooms: room.bedrooms,
+        baths: room.baths,
+        beds: room.beds,
+        host_image: room.host_image,
+        host_name: room.host_name,
+        city: room.city
       },
     });
   };
@@ -69,7 +77,7 @@ function Card() {
                 )}
               </div>
             </div>
-            <h3 className="text-gray-500 font-light">On the lake</h3>
+            <h3 className="text-gray-500 font-light">{room.city}</h3>
             <p className="py-2 text-sm text-gray-500 font-light">Jan 1 – 6</p>
             <div className="flex">
               <span className="font-regular">${room.price}&nbsp;</span>
