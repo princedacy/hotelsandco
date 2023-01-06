@@ -2,9 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { StarIcon } from "@heroicons/react/solid";
 import { useQuery } from "@tanstack/react-query";
-import { useRouter } from "next/router";
-function Card() {
-  const router = useRouter();
+function Card({router}) {
   const { data, isLoading, error } = useQuery({
     queryKey: ["rooms"],
     queryFn: () =>
@@ -16,8 +14,8 @@ function Card() {
 
   if (error) return "An error has occurred: " + error.message;
 
-  const openRoom = (room) => {
-    router.push({
+  const openRoom = async (room) => {
+    await router.push({
       pathname: "/room",
       query: {
         id: room.id,

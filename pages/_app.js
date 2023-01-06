@@ -1,3 +1,4 @@
+import React from "react";
 import "../styles/globals.css";
 import Router from "next/router";
 import ProgressBar from "@badrap/bar-of-progress";
