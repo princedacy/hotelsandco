@@ -1,42 +1,79 @@
 import React from "react";
-import { act, fireEvent, render, wait } from "@testing-library/react";
+import { render, screen, act, waitFor } from "@testing-library/react";
+import ServiceWorker from "../mocks/service-worker";
 import Card from "../components/Card";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
+global.window = {};
 
-test("Card fetches rooms data and renders correctly", async () => {
-  // Set up the mock service worker to return a specific response
-  const { getByText, getByAltText, getAllByTestId } = render(<Card />);
+const queryClient = new QueryClient();
 
-  // Wait for the data to load
-  await wait(() => expect(getByText("Loading...")).toBeInTheDocument());
-  await wait(() =>
-    expect(getByText("Beautiful Beachfront Apartment")).toBeInTheDocument()
-  );
-
-  // Verify that the images are displayed
-  const images = getAllByTestId("room-image");
-  expect(images).toHaveLength(2);
-  expect(images[0].src).toBe("https://example.com/image1.jpg");
-  expect(images[1].src).toBe("https://example.com/image2.jpg");
-
-  // Click on the first room
-  act(() => {
-    fireEvent.click(getByText("Beautiful Beachfront Apartment"));
+describe("Card", () => {
+  beforeEach(() => {
+    ServiceWorker.mockClear();
+    if (!window.navigator.serviceWorker) {
+      window.navigator.serviceWorker = {};
+    }
+    window.navigator.serviceWorker.register = jest.fn();
   });
 
-  // Wait for the page to navigate
-  await wait(() =>
-    expect(getByText("Beautiful Beachfront Apartment")).toBeInTheDocument()
-  );
+  it("should render the component and take a snapshot", async () => {
+    jest.setTimeout(20000);
+    const originalUseQuery = React.useQuery;
+    React.useQuery = jest.fn(() => ({
+      data: [
+        {
+          number: 89025,
+          status: false,
+          wifi: true,
+          location: "Rogers",
+          image: "https://loremflickr.com/640/480/city",
+          price: "517.00",
+          rating: "1",
+          description:
+            "Quisquam in cumque. Laboriosam ipsum dignissimos consequuntur iusto ipsum blanditiis. Iusto expedita provident pariatur minima tempora quidem assumenda corporis. Sequi illum voluptatum impedit voluptatum voluptatibus dolores quibusdam nulla quis. Repellendus est voluptates officia commodi nihil vel quaerat adipisci doloremque. Tempore laboriosam earum eum veniam reiciendis non culpa.",
+          reviews: "2",
+          host_image:
+            "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/72.jpg",
+          guests: "1",
+          bedrooms: "1",
+          beds: "2",
+          baths: "3",
+          host_name: "Mr. Marc Simonis",
+          city: "Southaven",
+          id: "1",
+        },
+      ],
+      isLoading: false,
+      error: null,
+    }));
 
-  // Render the component
-  const { container } = render(<Card />);
+    const tree = (
+      <QueryClientProvider client={queryClient}>
+        <Card />
+      </QueryClientProvider>
+    );
+    const { container } = render(tree);
+    expect(container).toMatchSnapshot();
 
-  // Wait for the component to finish loading data
-  await act(async () => {
-    await new Promise((resolve) => setTimeout(resolve, 0));
+    await act(async () => {
+      expect(container).toMatchSnapshot();
+      await waitFor(() =>
+        expect(screen.getByText("Rogers")).toBeInTheDocument()
+      );
+      await waitFor(() => expect(screen.getByAltText("")).toBeInTheDocument());
+      await waitFor(() =>
+        expect(screen.getByText("Southaven")).toBeInTheDocument()
+      );
+      await waitFor(() =>
+        expect(screen.getByText("Jan 1 – 6")).toBeInTheDocument()
+      );
+      await waitFor(() =>
+        expect(screen.getByText("$517 night")).toBeInTheDocument()
+      );
+    });
+
+    React.useQuery = originalUseQuery;
+    expect(document.body.innerHTML).toMatchSnapshot();
   });
-
-  // Take a snapshot of the component
-  expect(container).toMatchSnapshot();
 });

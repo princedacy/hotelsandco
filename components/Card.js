@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { StarIcon } from "@heroicons/react/solid";
 import { useQuery } from "@tanstack/react-query";
-function Card({router}) {
+function Card({ router }) {
   const { data, isLoading, error } = useQuery({
     queryKey: ["rooms"],
     queryFn: () =>
@@ -31,7 +31,7 @@ function Card({router}) {
         beds: room.beds,
         host_image: room.host_image,
         host_name: room.host_name,
-        city: room.city
+        city: room.city,
       },
     });
   };
@@ -65,7 +65,7 @@ function Card({router}) {
                 {room.location}
               </h3>
               <div className="flex items-center">
-                {(room.rating * 0.5) >= 3 ? (
+                {room.rating * 0.5 >= 3 ? (
                   <>
                     <StarIcon className="h-4" />
                     <p className="font-light text-sm">{room.rating * 0.5}</p>
