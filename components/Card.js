@@ -36,10 +36,10 @@ function Card({ router }) {
     });
   };
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-1 px-20">
+    <div className="flex flex-wrap px-20 mx-auto">
       {data.map((room) => (
         <div
-          className="card-container container mx-auto relative w-80 h-80 mb-16 cursor-pointer"
+          className="card-container container mx-auto relative md:w-1/2 lg:w-1/4 mb-16 cursor-pointer"
           key={room.id}
         >
           <div
