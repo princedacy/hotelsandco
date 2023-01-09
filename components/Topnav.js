@@ -6,7 +6,7 @@ function Topnav() {
     const router = useRouter()
   return (
     <div>
-      <header className="px-20 py-5 grid grid-cols-3 shadow-sm">
+      <header className="px-5 md:px-20 py-5 grid grid-cols-3 shadow-sm">
         <div className="relative flex items-center h-10 cursor-pointer my-auto" onClick={()=> router.push('/')}>
           <Image
             src="/Airbnb_logo.png"
