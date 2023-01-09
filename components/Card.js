@@ -36,7 +36,7 @@ function Card({ router }) {
     });
   };
   return (
-    <div className="flex flex-wrap px-20 mx-auto">
+    <div className="flex flex-wrap px-5 md:px-20 mx-auto">
       {data.map((room) => (
         <div
           className="card-container container mx-auto relative md:w-1/2 lg:w-1/4 mb-16 cursor-pointer"
