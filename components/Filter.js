@@ -1,6 +1,5 @@
 import React from "react";
 import FilterItem from "./FilterItem";
-import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/solid";
 import { Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -9,12 +8,13 @@ function Filter() {
   return (
     <div className="swiper mySwiper">
       <Swiper
+        id="filtersSwiper"
         modules={[Navigation]}
         spaceBetween={10}
         slidesPerView={10}
         navigation={{
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
+          nextEl: ".filtersSwiper.swiper-button-next",
+          prevEl: ".filtersSwiper.swiper-button-prev",
         }}
         onSlideChange={() => console.log("slide change")}
         onSwiper={(swiper) => console.log(swiper)}
@@ -79,8 +79,8 @@ function Filter() {
       </Swiper>
       <div className="absolute top-0 bg-gradient-to-r from-[white] w-11 h-10 to-white z-10"></div>
       <div className="absolute top-0 bg-gradient-to-l from-[white] w-11 h-10 to-white z-10 right-0"></div>
-      <div className="swiper-button-prev rounded-full cursor-pointer border !w-8 !h-8 absolute !top-2/3 after:!text-sm !text-black"></div>
-      <div className="swiper-button-next rounded-full cursor-pointer border !w-8 !h-8 absolute !top-2/3 right-12 after:!text-sm !text-black"></div>
+      <div className="filtersSwiper swiper-button-prev rounded-full cursor-pointer border !w-8 !h-8 absolute !top-2/3 after:!text-sm !text-black"></div>
+      <div className="filtersSwiper swiper-button-next rounded-full cursor-pointer border !w-8 !h-8 absolute !top-2/3 right-12 after:!text-sm !text-black"></div>
     </div>
   );
 }

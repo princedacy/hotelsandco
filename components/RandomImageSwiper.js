@@ -1,11 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import Image from "next/image";
-import SwiperCore, { Swiper, Navigation, Pagination } from "swiper";
-import { SwiperSlide } from "swiper/react";
+import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
 import styles from "../styles/style.module.css";
-
-SwiperCore.use([Navigation, Pagination]);
 
 function generateRandomImageUrls(count) {
   const baseUrl = "https://picsum.photos/600/400?image=";
@@ -21,69 +18,57 @@ function generateRandomImageUrls(count) {
 
 function RandomImageSwiper() {
   const [randomImageUrls, setRandomImageUrls] = useState([]);
+  const swiperRef = useRef(null);
 
   useEffect(() => {
-    const count = 5; // Adjust the count as needed
+    const count = 5;
     const imageUrls = generateRandomImageUrls(count);
     setRandomImageUrls(imageUrls);
   }, []);
 
-  useEffect(() => {
-    const swiper = new Swiper(".swiper-container", {
-      direction: "horizontal",
-      slidesPerView: 1,
-      spaceBetween: 0,
-      centeredSlides: true,
-      effect: "slide",
-      speed: "500",
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-      pagination: {
-        el: ".swiper-pagination",
-      },
-      on: {
-        slideChange: () => {
-            const prevButton = document.querySelector('.swiper-button-prev');
-            const nextButton = document.querySelector('.swiper-button-next');
-            if (swiper.isBeginning) {
-              prevButton.style.display = 'none';
-            } else {
-              prevButton.style.display = 'block';
-            }
-            if (swiper.isEnd) {
-              nextButton.style.display = 'none';
-            } else {
-              nextButton.style.display = 'block';
-            }  
-        }
-      }
-    });
-  }, []);
+  const handleSlideControlClick = (e) => {
+    e.stopPropagation();
+    
+    if (swiperRef.current) {
+      swiperRef.current.slideNext();
+    }
+  };
 
   return (
-    <div className="swiper-container mySwiper">
+    <div className="swiper-container" id="randomImagesSwiper">
       <div className="swiper-wrapper">
-        {randomImageUrls.map((imageUrl, index) => (
-          <SwiperSlide key={index} className={`h-96 md:h-16 lg:h-32`}>
-            <Image
-              src={imageUrl}
-              alt=""
-              style={{ objectFit: "cover", objectPosition: "center" }}
-              fill
-              className="!relative rounded-2xl"
-            />
-          </SwiperSlide>
-        ))}
+        <Swiper
+          ref={swiperRef}
+          spaceBetween={10}
+          slidesPerView={1}
+          navigation={{
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          }}
+          onSwiper={(swiper) => (swiperRef.current = swiper)}
+        >
+          {randomImageUrls.map((imageUrl, index) => (
+            <SwiperSlide key={index} className={`h-96 md:h-16 lg:h-32`}>
+              <Image
+                src={imageUrl}
+                alt=""
+                style={{ objectFit: "cover", objectPosition: "center" }}
+                fill
+                className="!relative rounded-2xl"
+              />
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
       <div
         className={`swiper-button-prev absolute transform -translate-y-1/2 ${styles["custom-button"]}`}
         style={{ left: "24px" }}
+        onClick={handleSlideControlClick}
       ></div>
       <div
         className={`swiper-button-next absolute transform -translate-y-1/2 ${styles["custom-button"]}`}
         style={{ right: "24px" }}
+        onClick={handleSlideControlClick}
       ></div>
       <div className={`swiper-pagination ${styles["custom-pagination"]}`}></div>
     </div>

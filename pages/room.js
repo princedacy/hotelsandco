@@ -122,7 +122,7 @@ function Room() {
       <div className="absolute top-full right-20 border w-1/4 h-40 rounded-2xl shadow-lg p-5">
         <div className="flex items-center justify-between font-medium text-sm">
           <div className="flex">
-            <span className="font-regular">${price}&nbsp;</span>
+            <span className="font-regular">${Number(price).toFixed(0)}&nbsp;</span>
             <span className="font-light">night</span>
           </div>
           <div className="flex items-center">
