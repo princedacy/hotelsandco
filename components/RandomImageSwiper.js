@@ -18,6 +18,8 @@ function generateRandomImageUrls(count) {
 
 function RandomImageSwiper() {
   const [randomImageUrls, setRandomImageUrls] = useState([]);
+  const [showNextButton, setShowNextButton] = useState(false);
+  const [showPrevButton, setShowPrevButton] = useState(false);
   const swiperRef = useRef(null);
 
   useEffect(() => {
@@ -28,14 +30,39 @@ function RandomImageSwiper() {
 
   const handleSlideControlClick = (e) => {
     e.stopPropagation();
-    
+
     if (swiperRef.current) {
-      swiperRef.current.slideNext();
+      if (e.currentTarget.classList.contains("swiper-button-prev")) {
+        swiperRef.current.slidePrev();
+      } else if (e.currentTarget.classList.contains("swiper-button-next")) {
+        swiperRef.current.slideNext();
+      }
     }
   };
 
+  const handleSlideChange = (swiper) => {
+    // Check if there's a previous slide and show the previous button
+    setShowPrevButton(swiper.isBeginning);
+
+    // Check if there's a next slide and show the next button
+    setShowNextButton(swiper.isEnd);
+  };
+
   return (
-    <div className="swiper-container" id="randomImagesSwiper">
+    <div
+      className="swiper-container"
+      id="randomImagesSwiper"
+      onMouseEnter={() => {
+        // When hovering, show the buttons
+        setShowNextButton(true);
+        setShowPrevButton(true);
+      }}
+      onMouseLeave={() => {
+        // When not hovering, hide the buttons
+        setShowNextButton(false);
+        setShowPrevButton(false);
+      }}
+    >
       <div className="swiper-wrapper">
         <Swiper
           ref={swiperRef}
@@ -45,7 +72,10 @@ function RandomImageSwiper() {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
           }}
-          onSwiper={(swiper) => (swiperRef.current = swiper)}
+          onSwiper={(swiper) => {
+            swiperRef.current = swiper;
+            handleSlideChange(swiper);
+          }}
         >
           {randomImageUrls.map((imageUrl, index) => (
             <SwiperSlide key={index} className={`h-96 md:h-16 lg:h-32`}>
@@ -62,12 +92,18 @@ function RandomImageSwiper() {
       </div>
       <div
         className={`swiper-button-prev absolute transform -translate-y-1/2 ${styles["custom-button"]}`}
-        style={{ left: "24px" }}
+        style={{
+          left: "24px",
+          visibility: showPrevButton ? "visible" : "hidden",
+        }}
         onClick={handleSlideControlClick}
       ></div>
       <div
         className={`swiper-button-next absolute transform -translate-y-1/2 ${styles["custom-button"]}`}
-        style={{ right: "24px" }}
+        style={{
+          right: "24px",
+          visibility: showNextButton ? "visible" : "hidden",
+        }}
         onClick={handleSlideControlClick}
       ></div>
       <div className={`swiper-pagination ${styles["custom-pagination"]}`}></div>
