@@ -1,4 +1,4 @@
-This is an Airbnb clone to demonstrate skills of the following:
+This is a PWC Frontend Engineer Challenge to demonstrate skills of the following:
 
 - [Next JS](https://nextjs.org)
 - [React-query](https://react-query.tanstack.com)
