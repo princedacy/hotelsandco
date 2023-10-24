@@ -3,6 +3,7 @@ import Image from "next/image";
 import { ViewGridIcon } from "@heroicons/react/solid";
 
 function generateRandomImageUrls(count) {
+  // Use of an external images API to have more than one image on room details photos
   const baseUrl = "https://picsum.photos/600/400?image=";
   const imageUrls = [];
 

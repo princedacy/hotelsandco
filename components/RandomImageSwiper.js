@@ -5,6 +5,7 @@ import "swiper/swiper-bundle.css";
 import styles from "../styles/style.module.css";
 
 function generateRandomImageUrls(count) {
+  // Use of an external images API to have more than one image on room listing card swiper
   const baseUrl = "https://picsum.photos/600/400?image=";
   const imageUrls = [];
 
