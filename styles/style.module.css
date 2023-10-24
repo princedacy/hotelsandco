@@ -1,0 +1,26 @@
+.room-list {
+    overflow-y: auto;
+}
+
+.custom-button {
+    top: 38%;
+    width: 28px;
+    height: 28px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+.custom-button::after {
+  font-size: 12px ;
+  font-weight: bold;
+  color: #000;
+}
+.custom-pagination {
+    top: 48% ;
+}
+.custom-pagination .swiper-pagination-bullet-active {
+    background: white !important;
+}
+.custom-pagination .swiper-pagination-bullet {
+    background: white !important;
+}
+  

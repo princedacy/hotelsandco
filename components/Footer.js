@@ -11,7 +11,7 @@ function Footer() {
   return (
     <div className="flex items-center justify-between fixed bottom-0 bg-white shadow-sm border text-sm font-light px-20 py-4 z-50 w-full">
       <div className="hidden lg:flex">
-        <span>© 2023 Airbnb, Inc.</span>
+        <span>© 2023 Hotels & Co, Inc.</span>
         <ul className="flex">
           <li className="before:content-['·'] px-2">
             <a href="#" className="pl-2 no-underline hover:underline">

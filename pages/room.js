@@ -5,6 +5,7 @@ import { useRouter } from "next/router";
 import Image from "next/image";
 import { StarIcon } from "@heroicons/react/solid";
 import { ShareIcon, HeartIcon, HomeIcon, ArrowCircleDownIcon, PuzzleIcon } from "@heroicons/react/outline";
+import RandomImageWrapper from "../components/RandomImageWrapper";
 
 function Room() {
   const router = useRouter();
@@ -61,10 +62,7 @@ function Room() {
             </div>
           </div>
         </div>
-        <div
-          style={{ backgroundImage: `url(${image})` }}
-          className="bg-center bg-cover h-72 rounded-3xl cursor-pointer hover:shadow-md"
-        ></div>
+        <RandomImageWrapper/>
         <p className="pt-10 w-1/2">{description}</p>
       </div>
       <div className="px-20 py-10">
@@ -121,7 +119,7 @@ function Room() {
           </div>
         </div>
       </div>
-      <div className="absolute top-3/4 right-20 border w-1/4 h-40 rounded-2xl shadow-lg p-5">
+      <div className="absolute top-full right-20 border w-1/4 h-40 rounded-2xl shadow-lg p-5">
         <div className="flex items-center justify-between font-medium text-sm">
           <div className="flex">
             <span className="font-regular">${price}&nbsp;</span>

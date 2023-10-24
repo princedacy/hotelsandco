@@ -3,6 +3,7 @@ import "../styles/globals.css";
 import Router from "next/router";
 import ProgressBar from "@badrap/bar-of-progress";
 
+
 const progress = new ProgressBar({
   size: 5,
   color: "#ff385c",
