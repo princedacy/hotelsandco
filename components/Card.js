@@ -95,7 +95,7 @@ function Card({ router }) {
               >
                 <Image
                   className="!w-5 !h-5 absolute !top-5 !right-5 cursor-pointer z-40 !left-auto"
-                  src={"/icons/heart.svg"}
+                  src={"https://princedacy.github.io/hotelsandco/icons/heart.svg"}
                   alt="add to wishlist"
                   style={{ objectFit: "contain", objectPosition: "right" }}
                   fill

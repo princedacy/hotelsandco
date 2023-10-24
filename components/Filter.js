@@ -25,55 +25,55 @@ function Filter() {
           </SwiperSlide>
 
           <SwiperSlide className="!w-fit px-5">
-            <FilterItem title="Amazing pools" Icon="/icons/pools.jpeg" />
+            <FilterItem title="Amazing pools" Icon="https://princedacy.github.io/hotelsandco/icons/pools.jpeg" />
           </SwiperSlide>
           <SwiperSlide className="!w-fit px-5">
-            <FilterItem title="Islands" Icon="/icons/islands.jpeg" />
+            <FilterItem title="Islands" Icon="https://princedacy.github.io/hotelsandco/icons/islands.jpeg" />
           </SwiperSlide>
           <SwiperSlide className="!w-fit px-5">
-            <FilterItem title="Golfing" Icon="/icons/golf.jpeg" />
+            <FilterItem title="Golfing" Icon="https://princedacy.github.io/hotelsandco/icons/golf.jpeg" />
           </SwiperSlide>
           <SwiperSlide className="!w-fit px-5">
-            <FilterItem title="OMG!" Icon="/icons/omg.jpeg" />
+            <FilterItem title="OMG!" Icon="https://princedacy.github.io/hotelsandco/icons/omg.jpeg" />
           </SwiperSlide>
           <SwiperSlide className="!w-fit px-5">
-            <FilterItem title="Play" Icon="/icons/play.jpeg" />
+            <FilterItem title="Play" Icon="https://princedacy.github.io/hotelsandco/icons/play.jpeg" />
           </SwiperSlide>
           <SwiperSlide className="!w-fit px-5">
-            <FilterItem title="Chef's kitchens" Icon="/icons/kitchen.jpeg" />
+            <FilterItem title="Chef's kitchens" Icon="https://princedacy.github.io/hotelsandco/icons/kitchen.jpeg" />
           </SwiperSlide>
           <SwiperSlide className="!w-fit px-5">
-            <FilterItem title="Private rooms" Icon="/icons/rooms.jpeg" />
+            <FilterItem title="Private rooms" Icon="https://princedacy.github.io/hotelsandco/icons/rooms.jpeg" />
           </SwiperSlide>
           <SwiperSlide className="!w-fit px-5">
-            <FilterItem title="Mansions" Icon="/icons/mansions.jpeg" />
+            <FilterItem title="Mansions" Icon="https://princedacy.github.io/hotelsandco/icons/mansions.jpeg" />
           </SwiperSlide>
           <SwiperSlide className="!w-fit px-5">
-            <FilterItem title="Luxe" Icon="/icons/luxe.jpeg" />
+            <FilterItem title="Luxe" Icon="https://princedacy.github.io/hotelsandco/icons/luxe.jpeg" />
           </SwiperSlide>
           <SwiperSlide className="!w-fit px-5">
-            <FilterItem title="Iconic cities" Icon="/icons/cities.jpeg" />
+            <FilterItem title="Iconic cities" Icon="https://princedacy.github.io/hotelsandco/icons/cities.jpeg" />
           </SwiperSlide>
           <SwiperSlide className="!w-fit px-5">
-            <FilterItem title="Beachfront" Icon="/icons/beach.jpeg" />
+            <FilterItem title="Beachfront" Icon="https://princedacy.github.io/hotelsandco/icons/beach.jpeg" />
           </SwiperSlide>
           <SwiperSlide className="!w-fit px-5">
-            <FilterItem title="Skiing" Icon="/icons/skiing.jpeg" />
+            <FilterItem title="Skiing" Icon="https://princedacy.github.io/hotelsandco/icons/skiing.jpeg" />
           </SwiperSlide>
           <SwiperSlide className="!w-fit px-5">
-            <FilterItem title="Amazing views" Icon="/icons/views.jpeg" />
+            <FilterItem title="Amazing views" Icon="https://princedacy.github.io/hotelsandco/icons/views.jpeg" />
           </SwiperSlide>
           <SwiperSlide className="!w-fit px-5">
-            <FilterItem title="Farms" Icon="/icons/farms.jpeg" />
+            <FilterItem title="Farms" Icon="https://princedacy.github.io/hotelsandco/icons/farms.jpeg" />
           </SwiperSlide>
           <SwiperSlide className="!w-fit px-5">
-            <FilterItem title="Surfing" Icon="/icons/surfing.jpeg" />
+            <FilterItem title="Surfing" Icon="https://princedacy.github.io/hotelsandco/icons/surfing.jpeg" />
           </SwiperSlide>
           <SwiperSlide className="!w-fit px-5">
-            <FilterItem title="Tiny homes" Icon="/icons/tinyhomes.jpeg" />
+            <FilterItem title="Tiny homes" Icon="https://princedacy.github.io/hotelsandco/icons/tinyhomes.jpeg" />
           </SwiperSlide>
           <SwiperSlide className="!w-fit px-5">
-            <FilterItem title="Trending" Icon="/icons/trending.jpeg" />
+            <FilterItem title="Trending" Icon="https://princedacy.github.io/hotelsandco/icons/trending.jpeg" />
           </SwiperSlide>
         </div>
       </Swiper>
